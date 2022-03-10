@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="box">
+    <h1 class="serif">Register Form</h1>
+
+    <form>
+        <fieldset id="pas1">
+            <legend class="serif"> Pasul1: Detalii utilizator</legend>
+            <div>
+                <label for="imagine" class="no-block">Importa imagine:</label>
+                <input id="img" class="no-input serif" value="" type="file" name="imagine" accept="image/*">
+            </div>
+            <div class="required">
+                <label for="nume">Nume:</label>
+                <input type="text" id="nume" maxlength="25" name="nume" placeholder="Introduceti numele">
+            </div> 
+            <div class="required">
+                <label for="prenume">Prenume:</label>
+                <input type="text" id="prenume" maxlength="25" name="prenume" placeholder="Introduceti prenumele">
+            </div>
+            <div class="required">
+                <label for="M">Sex:</label>
+                <input type="radio" id="M" name="sex" value="M" class="no-input check no-shadow radio-btn">
+                <label for="M" class="no-label serif sex-label">Masculin</label>
+                <input type="radio" id="F" name="sex" value="F" class="no-input check no-shadow radio-btn">
+                <label for="F" class="no-label serif sex-label">Feminin</label>
+            </div>
+            <div class="required">
+                <label for="datanasterii">Data nasterii:</label>
+                <input type="date" id="datanasterii" value="" pattern="dd/mm/yyyy" name="datanasterii">
+            </div>
+            <div class="required">
+                <label for="cnp">CNP:</label>
+                <input type="text" id="cnp" name="cnp" minlength="13" maxlength="13" pattern="[1-9]{1}[0-9]{12}">
+            </div>
+    
+            <input type="button" value="Next" id="Next1" class="no-input serif">
+
+        </fieldset>   
+
+        <fieldset id="pas2" class="hidden">
+            <legend class="serif"> Pasul2: Detalii contact</legend>
+            <div class="required">
+                <label for="nrtel">Numar Telefon:</label>
+                <input type="tel" id="nrtel" name="nrtel" minlength="10" maxlength="15" pattern="[0-9]">
+            </div>
+            <div class="required">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </div> 
+            <!-- datalist permite adaugarea unor noi valori! -->
+            <!-- <div> 
+                <label for="judet">Judet:</label>
+                <input name="judet" list="lista-judete" id="judet">
+
+                <datalist id="lista-judete">
+                    <option value="Ilfov">
+                    <option value="Giurgiu">
+                    <option value="Dambovita">
+                    <option value="Arges">
+                    <option value="Prahova">
+                    <option value="Calarasi">
+                </datalist>
+            </div>  -->
+            <div>
+                <label for="judete">Judet:</label>
+                <select id="judete" class="serif">
+                    <option value="default">-</option>
+                    <option value="Ilfov">Ilfov</option>
+                    <option value="Giurgiu">Giurgiu</option>
+                    <option value="Dambovita">Dambovita</option>
+                    <option value="Arges">Arges</option>
+                    <option value="Prahova">Prahova</option>
+                    <option value="Calarasi">Calarasi</option>
+                </select>
+            </div> 
+            <div>
+                <label for="oras">Oras:</label>
+                <select id="orase" class="serif">
+                    <option value="">-</option>
+                    <option value="Bragadiru">Bragadiru</option>
+                    <option value="Giurgiu">Giurgiu</option>
+                    <option value="Targoviste">Targoviste</option>
+                    <option value="Ploiesti">Ploiesti</option>
+                    <option value="Pitesti">Pitesti</option>
+                    <option value="Calarasi">Calarasi</option>
+                </select>
+            </div>
+            <div>
+                <label for="adresa">Adresa:</label>
+                <textarea name="adresa" id="adresa" rows="4" cols="20" placeholder="Adresa"></textarea>
+            </div>
+            <div>
+                <label for="cod-postal">Cod Postal:</label>
+                <input type="text" id="codPostal" name="cod-postal" multiple>
+            </div>
+        
+            <div class="back">
+                <input type="button" value="Back" id="Back1" class="no-input serif">
+                <input type="button" value="Next" id="Next2" class="no-input serif">
+            </div>
+
+        </fieldset> 
+
+        <fieldset id="pas3" class="hidden">
+            <legend class="serif"> Pasul3: Credentiale</legend>
+            <div class="required">
+                <label for="parola">Parola:</label>
+                <input type="password" id="parola" class="validare" name="parola">
+                <p id="parolaHintText">Parola trebuie sa aiba minim 8 caractere (o litera mica, una mare, o cifra si un caracter special)</p>
+            </div>
+            <div class="required">
+                <label for="parola-confirm">Confirmati Parola:</label>
+                <input type="password" id="parolaConfirm" class="validare" name="parola-confirm">
+                <p id="parola2HintText">Cele 2 parole nu corespund</p>
+            </div>
+            <div>
+                <input class="check no-input" type="checkbox" name="newsletter" id="newsletter" class="no-input">
+                <label id="newsletter" for="newsletter" class="no-label serif"> Doresc sa ma abonez la newsletter</label><br>
+            </div>
+            <div class="required">
+                <input class="check no-input" type="checkbox" name="termeni" id="termeni" class="no-input">
+                <label for="termeni" class="no-label serif"> Sunt de acord cu Termenii&Conditiile. *</label><br>
+            </div>
+        
+            <div class="back">
+                <input type="button" value="Back" id="Back2" class="no-input serif">
+                <input type="submit" value="Inregistrare" id="Submit" class="no-input serif">
+            </div>
+
+        </fieldset> 
+      </form>
+    </div>
+
+    <!-- <p>Campurile marcate cu * sunt obligatorii.</p> -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/JavaScript/script.js"></script>
+
+</body>
+</html>
