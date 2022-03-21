@@ -69,9 +69,27 @@ input:not(.no-input), textarea, select{
     padding: 10px;
     background-color: #e97c9f2d;
 }
+#parola,#parolaConfirm{
+    width: 95%;
+}
 
-fieldset div,input[type="button"],input[type="submit"]{
-    margin-top: 15px; 
+i {
+    color: #cc0070;
+    padding: 5px 5px 5px 0;
+}
+
+.pass-input {
+    display: flex;
+    align-items: center; 
+}
+
+.pass-input:not(input){
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+fieldset>div,input[type="button"],input[type="submit"]{
+    margin-top: 15px;
 }
 
 label:not(.no-label){
@@ -87,6 +105,7 @@ input:not(.no-input),.no-label, textarea, select{
 
 label:not(.no-label,.no-block){
     display: block ;
+    justify-content: center;
 } 
 
 input:not(.no-input):focus, textarea:focus, select:focus{
@@ -103,14 +122,14 @@ input:not(.no-input):focus, textarea:focus, select:focus{
     justify-content: space-between;
 }
 
-.validare:not(input[type="date"],.no-input){
+.invalid:not(input[type="date"],.no-input){
     background-image: url("../Media/not.png");
     background-repeat: no-repeat;
     background-position: 97%;
     background-size: 20px;
 }
 
-.validare:not(.no-input){
+.invalid:not(.no-input){
     animation: shake 0.2s ease-in-out 0s 2;
 }
 @keyframes shake {
@@ -149,4 +168,11 @@ input:not(.no-input):focus, textarea:focus, select:focus{
 
 .img-gifs{
     padding-top: 20px;
+}
+
+.tooltip.top .tooltip-inner {
+    background-color: #e44879;
+}
+.tooltip.top .tooltip-arrow {
+    border-top-color: #e44879;
 }
