@@ -5,12 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register Form</title>
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/main.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Assets/CSS/reset.css">
+    <link rel="stylesheet" href="Assets/CSS/main.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+    <!-- <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
 </head>
 <body>
     <div class="box">
@@ -105,7 +110,7 @@
             </div>
             <div>
                 <label for="cod-postal">Cod Postal:</label>
-                <input type="text" id="codPostal" name="cod-postal" multiple>
+                <input type="text" id="codPostal" name="cod-postal">
             </div>
         
             <div class="back">
@@ -119,12 +124,22 @@
             <legend class="serif"> Pasul3: Credentiale</legend>
             <div class="required">
                 <label for="parola">Parola:</label>
-                <input type="password" id="parola" class="validare" name="parola">
+                <div class="pass-input">
+                    <span>
+                        <i id="veziParola" class="bi bi-eye"></i>
+                    </span>
+                    <input data-toggle="tooltip" title="" type="password" id="parola" class="invalid" name="parola">
+                </div>
                 <p id="parolaHintText">Parola trebuie sa aiba minim 8 caractere (o litera mica, una mare, o cifra si un caracter special)</p>
             </div>
             <div class="required">
                 <label for="parola-confirm">Confirmati Parola:</label>
-                <input type="password" id="parolaConfirm" class="validare" name="parola-confirm">
+                <div class="pass-input">
+                    <span>
+                        <i id="veziParola2" class="bi bi-eye"></i>
+                    </span>
+                    <input type="password" id="parolaConfirm" class="invalid" name="parola-confirm">
+                </div>
                 <p id="parola2HintText">Cele 2 parole nu corespund</p>
             </div>
             <div>
@@ -148,7 +163,8 @@
     <!-- <p>Campurile marcate cu * sunt obligatorii.</p> -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="assets/JavaScript/script.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="Assets/JavaScript/script.js"></script>
 
 </body>
 </html>
